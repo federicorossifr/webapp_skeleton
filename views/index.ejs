@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+  <%- include templates/head.ejs %>
+  <body>
+    <h1><%= title %></h1>
+    <div class="alert alert-success" role="alert" id="showMe" style="display: none">
+      If you see <strong>this</strong>, everything is working!!
+    </div>
+  </body>
+  <script type="text/javascript">
+      var socket = io.connect();
+      socket.on("hello",function() {
+        $("#showMe").show("normal");
+      });
+  </script>
+</html>
