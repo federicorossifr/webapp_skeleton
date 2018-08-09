@@ -14,7 +14,13 @@ module.exports = function(grunt) {
       'overrides': {
         'socket.io-client': {
           'main': 'dist/socket.io.js'
-        }
+        },
+      "bootstrap": {
+      	"main": [
+        	"dist/js/bootstrap.js",
+        	"dist/css/bootstrap.css"
+      	]
+    	}
       }
      }
 	}
